@@ -1,8 +1,8 @@
 export
-const getCall =(counter)=>{
+const getCall =(type,payload)=>{
   console.log('hello')
   return{
-    type:'testing',
-    payload:counter
+    type:type,
+    payload:payload
   }
 }

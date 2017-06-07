@@ -3,9 +3,11 @@ import {
   View,
   Text,
   TouchableOpacity,
-  Image
+  Image,
+  Dimensions
 } from 'react-native'
 import style from '../Style'
+var {height, width} = Dimensions.get('window');
 export default class Header extends Component{
   render(){
     return(
@@ -18,8 +20,10 @@ export default class Header extends Component{
           : null
         }
         </TouchableOpacity>
-        <Text>{this.props.header}</Text>
-        <View>{this.props.rightHeader }</View>
+        <View style={{width:width/1.5}}>
+        <Text style={{textAlign:'center',width:width/1.5}} numberOfLines={1}>{this.props.header}</Text>
+        </View>
+        <View style={{width:width/8}}>{this.props.rightHeader }</View>
         </View>
       )
   }
