@@ -43,7 +43,7 @@ class HomeBoxes extends React.Component {
               this.setState({
                 counter:this.state.counter+1
               })
-              this.props.dispatch(getCall(this.state.counter))
+              this.props.dispatch(getCall('testing',this.state.counter))
             }}
             style={{
               padding:20,
