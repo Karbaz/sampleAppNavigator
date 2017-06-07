@@ -14,15 +14,8 @@ const routeConfiguration = {
 // going to disable the header for now
 
 const stackNavigatorConfiguration = {
-  headerMode: 'float',
-  title: 'Home',
-  initialRoute: 'TabTwoScreenOne',
-   headerRight: (
-      <Button
-        title={'Done'}
-        onPress={() => {Alert.alert('df')}}
-      />
-    )
+  headerMode: 'none',
+  initialRoute: 'TabTwoScreenOne'
 }
 
 export const NavigatorTabTwo = StackNavigator(routeConfiguration,stackNavigatorConfiguration)

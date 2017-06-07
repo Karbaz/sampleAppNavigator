@@ -2,10 +2,6 @@
 import React from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
 export default class TabOneScreenTwo extends React.Component {
-
-  static navigationOptions = ({ navigation }) => ({
-    title: 'Two with',
-    });
   render(){
     return(
       <View style={{

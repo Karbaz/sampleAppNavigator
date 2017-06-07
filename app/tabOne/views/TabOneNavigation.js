@@ -23,9 +23,6 @@ const mapStateToProps = (state) => {
 class TabOneNavigation extends React.Component {
   static navigationOptions = ({navigation})=>({
     tabBarLabel: 'Tab One',
-    title:'tester',
-    header:'scene',
-    label:'profile',
     tabBarIcon: ({ tintColor }) => <Icon size={ 20 } name={ 'cogs' } color={ tintColor }/>
   })
 
