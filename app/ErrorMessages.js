@@ -1,0 +1,16 @@
+export const GENERAL_ERROR = 'Something went wrong. Please try again later!';
+export const LOGIN_TO_ADD_WISHLIST = 'Please login to add to wishlist!';
+export const ADDED_TO_WISHLIST = 'Product added in wishlist.';
+export const REMOVED_FROM_WISHLIST = 'Product removed from wishlist.';
+export const NO_PAYMENT_METHODS_AVAILABLE = 'Shipping to this pincode unavailable.';
+export const SELECT_PAYMENT_OPTION = 'Please select payment option.';
+export const INVALID_CARD_DETAILS = 'Invalid card details.';
+export const ENTER_CARD_DETAILS = 'Please enter card details to proceed.';
+export const ENTER_CVV = 'Please enter CVV to proceed';
+export const SELECT_SAVED_CARD = 'Please select saved card to proceed.';
+export const SELECT_NETBANK = 'Please select Net Bank to proceed.';
+export const SELECT_OTHER_WALLETS_OPTION = 'Please select wallet option.';
+export const ENTER_VPA = 'Please enter VPA.';
+export const ENTER_VALID_VPA = 'Please enter valid VPA.';
+export const INVALID_CVV = 'Invalid CVV.';
+export const TRANSACTION_FAILED = 'Transaction failed.';
