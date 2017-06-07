@@ -4,8 +4,8 @@ import { StackNavigator } from 'react-navigation'
 import React, { Component } from 'react'
 import {Button,Alert} from 'react-native'
 // Screens
-import TabTwoScreenOne from './views/TabTwoScreenOne'
-import TabTwoScreenTwo from './views/TabTwoScreenTwo'
+import TabTwoScreenOne from '../components/TabTwoScreenOne'
+import TabTwoScreenTwo from '../components/TabTwoScreenTwo'
 
 const routeConfiguration = {
   TabTwoScreenOne: { screen: TabTwoScreenOne },

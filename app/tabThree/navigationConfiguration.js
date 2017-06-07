@@ -2,9 +2,9 @@
 import { StackNavigator } from 'react-navigation'
 
 // Screens
-import TabThreeScreenOne from './views/TabThreeScreenOne'
-import TabThreeScreenTwo from './views/TabThreeScreenTwo'
-import TabThreeScreenThree from './views/TabThreeScreenThree'
+import TabThreeScreenOne from '../components/TabThreeScreenOne'
+import TabThreeScreenTwo from '../components/TabThreeScreenTwo'
+import TabThreeScreenThree from '../components/TabThreeScreenThree'
 
 const routeConfiguration = {
   TabThreeScreenOne: { screen: TabThreeScreenOne },
