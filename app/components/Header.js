@@ -13,13 +13,15 @@ export default class Header extends Component{
     return(
         <View style={[style.headerStyle]}>  
         
-        <TouchableOpacity onPress={()=>{this.props.navigation.goBack()}}>
+        <View style={{justifyContent:'center'}}>
+        <TouchableOpacity style={{width:width/11}} onPress={()=>{this.props.navigation.goBack()}}>
         {
           this.props.showBack ? 
           <Image style={{height:20,width:20}} source={require('../images/back_chevron.png')} />
           : null
         }
         </TouchableOpacity>
+        </View>
         <View style={{width:width/1.5}}>
         <Text style={{textAlign:'center',width:width/1.5}} numberOfLines={1}>{this.props.header}</Text>
         </View>
