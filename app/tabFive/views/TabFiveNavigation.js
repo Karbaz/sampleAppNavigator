@@ -7,7 +7,7 @@ import { NavigatorTabFive } from '../navigationConfiguration'
 //Redux
 import { connect } from 'react-redux'
 // Icon
-import Icon from 'react-native-vector-icons/FontAwesome'
+import Icon from 'react-native-vector-icons/Ionicons'
 
 const mapStateToProps = (state) => {
  return {
@@ -16,8 +16,8 @@ const mapStateToProps = (state) => {
 }
 class TabFiveNavigation extends React.Component {
   static navigationOptions = {
-    tabBarLabel: 'Tab five',
-    tabBarIcon: ({ tintColor }) => <Icon size={ 20 } name={ 'umbrella' } color={ tintColor }/>
+    tabBarLabel: 'Profile',
+    tabBarIcon: ({ tintColor }) => <Icon size={ 25 } name={ 'ios-person-outline' } color={ "#51cccc" }/>
   }
 
 render(){

@@ -7,7 +7,7 @@ import { NavigatorTabTwo } from '../navigationConfiguration'
 //Redux
 import { connect } from 'react-redux'
 // Icon
-import Icon from 'react-native-vector-icons/FontAwesome'
+import Icon from 'react-native-vector-icons/Ionicons'
 
 const mapStateToProps = (state) => {
  return {
@@ -16,8 +16,8 @@ const mapStateToProps = (state) => {
 }
 class TabTwoNavigation extends React.Component {
   static navigationOptions = {
-    tabBarLabel: 'Tab Two',
-    tabBarIcon: ({ tintColor }) => <Icon size={ 20 } name={ 'taxi' } color={ tintColor }/>
+    tabBarLabel: 'Menu',
+    tabBarIcon: ({ tintColor }) => <Icon size={ 25 } name={ 'ios-menu-outline' } color={ "#51cccc" }/>
   }
 
 render(){

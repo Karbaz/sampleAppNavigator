@@ -7,7 +7,7 @@ import { NavigatorTabThree } from '../navigationConfiguration'
 //Redux
 import { connect } from 'react-redux'
 // Icon
-import Icon from 'react-native-vector-icons/FontAwesome'
+import Icon from 'react-native-vector-icons/Ionicons'
 
 const mapStateToProps = (state) => {
  return {
@@ -17,7 +17,7 @@ const mapStateToProps = (state) => {
 class TabThreeNavigation extends React.Component {
   static navigationOptions = {
     tabBarLabel: 'Tab Three',
-    tabBarIcon: ({ tintColor }) => <Icon size={ 20 } name={ 'umbrella' } color={ tintColor }/>
+    tabBarIcon: ({ tintColor }) => <Icon size={ 25 } name={ 'ios-cart-outline' } color={ "#51cccc" }/>
   }
 
 render(){
