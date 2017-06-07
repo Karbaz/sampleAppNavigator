@@ -17,7 +17,6 @@ const mapStateToProps = (state) => {
 class TabTwoNavigation extends React.Component {
   static navigationOptions = {
     tabBarLabel: 'Tab Two',
-    title:'tester',
     tabBarIcon: ({ tintColor }) => <Icon size={ 20 } name={ 'taxi' } color={ tintColor }/>
   }
 
