@@ -11,6 +11,8 @@ import { NavigatorTabThree } from './tabThree/navigationConfiguration'
 import { NavigatorTabFour } from './tabFour/navigationConfiguration'
 import { NavigatorTabFive } from './tabFive/navigationConfiguration'
 import { TabBar, tabBarReducer } from './tabBar/navigationConfiguration'
+import {HomeBoxesReducer} from './reducers/HomeBoxes';
+
 
 // Middleware
 const middleware = () => {
@@ -30,6 +32,8 @@ export default createStore(
     tabFour: (state,action) => NavigatorTabFour.router.getStateForAction(action,state),
 
     tabFive: (state,action) => NavigatorTabFive.router.getStateForAction(action,state),
+
+    HomeBoxes:HomeBoxesReducer
 
   }),
   middleware(),
