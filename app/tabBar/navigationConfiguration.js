@@ -5,12 +5,13 @@ import TabOneNavigation from '../tabOne/views/TabOneNavigation'
 import TabTwoNavigation from '../tabTwo/views/TabTwoNavigation'
 import TabThreeNavigation from '../tabThree/views/TabThreeNavigation'
 import TabFourNavigation from '../tabFour/views/TabFourNavigation'
-
+import TabFiveNavigation from '../tabFive/views/TabFiveNavigation'
 const routeConfiguration = {
   TabOneNavigation: { screen: TabOneNavigation },
   TabTwoNavigation: { screen: TabTwoNavigation },
   TabThreeNavigation: { screen: TabThreeNavigation },
-  TabFourNavigation : {screen: TabFourNavigation }
+  TabFourNavigation : {screen: TabFourNavigation },
+  TabFiveNavigation : { screen : TabFiveNavigation},
 }
 
 const tabBarConfiguration = {

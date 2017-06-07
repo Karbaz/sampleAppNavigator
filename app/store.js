@@ -9,7 +9,7 @@ import { NavigatorTabOne } from './tabOne/navigationConfiguration'
 import { NavigatorTabTwo } from './tabTwo/navigationConfiguration'
 import { NavigatorTabThree } from './tabThree/navigationConfiguration'
 import { NavigatorTabFour } from './tabFour/navigationConfiguration'
-
+import { NavigatorTabFive } from './tabFive/navigationConfiguration'
 import { TabBar, tabBarReducer } from './tabBar/navigationConfiguration'
 
 // Middleware
@@ -28,6 +28,8 @@ export default createStore(
     tabThree: (state,action) => NavigatorTabThree.router.getStateForAction(action,state),
 
     tabFour: (state,action) => NavigatorTabFour.router.getStateForAction(action,state),
+
+    tabFive: (state,action) => NavigatorTabFive.router.getStateForAction(action,state),
 
   }),
   middleware(),
