@@ -3,7 +3,7 @@ import React from 'react'
 import { View, Text, TouchableOpacity,Button,Alert } from 'react-native'
 import { connect } from 'react-redux'
 import { getCall } from '../actions/HomeBoxesActions'
-class TabOneScreenOne extends React.Component {
+class HomeBoxes extends React.Component {
   
   constructor(props) {
     super(props);
@@ -16,11 +16,11 @@ class TabOneScreenOne extends React.Component {
     return(
       <View style={{
         flex:1,
-        backgroundColor:'red',
+        backgroundColor:'#51cccc',
         alignItems:'center',
         justifyContent:'center'
       }}>
-        <Text>{ 'Tab One Screen One' }</Text>
+        <Text>HomeBoxes</Text>
         <TouchableOpacity
           onPress={ () => {
             this.setState({
@@ -36,9 +36,11 @@ class TabOneScreenOne extends React.Component {
           }}>
           <Text>{`PropsValue ${this.props.HomeBoxes.HomeBoxe}`}  {`Props ${this.props.HomeBoxes.counter}`} {`State ${this.state.counter}`}</Text>
         </TouchableOpacity>
+
         <Text onPress={()=>{
-            this.props.navigation.navigate('TabOneScreenTwo') 
-          }}>Next Page</Text>
+            this.props.navigation.navigate('Categories')
+          }} style={{marginTop:100}}>Cat</Text>
+          
       </View>
     )
   }
@@ -46,10 +48,9 @@ class TabOneScreenOne extends React.Component {
 
 
 const mapStateToProps = (state) => {
-  console.log(state,'state')
  return {
     HomeBoxes: state.HomeBoxes,    
   }
 }
 
-export default connect(mapStateToProps)(TabOneScreenOne)
+export default connect(mapStateToProps)(HomeBoxes)

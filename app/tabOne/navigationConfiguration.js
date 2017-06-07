@@ -3,19 +3,19 @@
 import { StackNavigator } from 'react-navigation'
 
 // Screens
-import TabOneScreenOne from '../components/TabOneScreenOne'
-import TabOneScreenTwo from '../components/TabOneScreenTwo'
+import HomeBoxes from '../components/HomeBoxes'
+import Categories from '../components/Categories'
 
 const routeConfiguration = {
-  TabOneScreenOne: { screen: TabOneScreenOne },
-  TabOneScreenTwo: { screen: TabOneScreenTwo },
+  HomeBoxes: { screen: HomeBoxes },
+  Categories : { screen: Categories},
 }
 
 // going to disable the header for now
 const stackNavigatorConfiguration = {
   headerMode: 'none',
   title: 'Home',
-  initialRouteName: 'TabOneScreenOne'
+  initialRouteName: 'HomeBoxes'
 }
 
 export const NavigatorTabOne = StackNavigator(routeConfiguration,stackNavigatorConfiguration)
