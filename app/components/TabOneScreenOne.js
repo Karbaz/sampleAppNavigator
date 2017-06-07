@@ -20,7 +20,7 @@ export default class TabOneScreenOne extends React.Component {
             backgroundColor:'yellow',
             marginTop:20
           }}>
-          <Text>{'Go to next screen this  asdasd ds dtab'}</Text>
+          <Text>{'from containers'}</Text>
         </TouchableOpacity>
       </View>
     )

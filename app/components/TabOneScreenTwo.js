@@ -19,7 +19,7 @@ export default class TabOneScreenTwo extends React.Component {
             backgroundColor:'purple',
             marginTop:20
           }}>
-          <Text>{'Go back a screen this tab'}</Text>
+          <Text>{'Go containers'}</Text>
         </TouchableOpacity>
 
       </View>
