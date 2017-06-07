@@ -8,6 +8,8 @@ import logger from 'redux-logger'
 import { NavigatorTabOne } from './tabOne/navigationConfiguration'
 import { NavigatorTabTwo } from './tabTwo/navigationConfiguration'
 import { NavigatorTabThree } from './tabThree/navigationConfiguration'
+import { NavigatorTabFour } from './tabFour/navigationConfiguration'
+
 import { TabBar, tabBarReducer } from './tabBar/navigationConfiguration'
 
 // Middleware
@@ -24,6 +26,9 @@ export default createStore(
     tabTwo: (state,action) => NavigatorTabTwo.router.getStateForAction(action,state),
 
     tabThree: (state,action) => NavigatorTabThree.router.getStateForAction(action,state),
+
+    tabFour: (state,action) => NavigatorTabFour.router.getStateForAction(action,state),
+
   }),
   middleware(),
 )
