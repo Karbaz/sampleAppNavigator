@@ -16,7 +16,7 @@ import Icon from 'react-native-vector-icons/Ionicons'
 
 const mapStateToProps = (state) => {
  return {
-  navigationState: state.tabOne
+  navigationState: state.HomeTab
   }
 }
 

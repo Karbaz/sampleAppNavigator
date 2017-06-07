@@ -23,15 +23,15 @@ export default createStore(
   combineReducers({
     tabBar: tabBarReducer,
 
-    tabOne: (state,action) => NavigatorTabOne.router.getStateForAction(action,state),
+    HomeTab: (state,action) => NavigatorTabOne.router.getStateForAction(action,state),
 
-    tabTwo: (state,action) => NavigatorTabTwo.router.getStateForAction(action,state),
+    MenuTab: (state,action) => NavigatorTabTwo.router.getStateForAction(action,state),
 
-    tabThree: (state,action) => NavigatorTabThree.router.getStateForAction(action,state),
+    BagTab: (state,action) => NavigatorTabThree.router.getStateForAction(action,state),
 
-    tabFour: (state,action) => NavigatorTabFour.router.getStateForAction(action,state),
+    WishlistTab: (state,action) => NavigatorTabFour.router.getStateForAction(action,state),
 
-    tabFive: (state,action) => NavigatorTabFive.router.getStateForAction(action,state),
+    ProfileTab: (state,action) => NavigatorTabFive.router.getStateForAction(action,state),
 
     HomeBoxes:HomeBoxesReducer
 

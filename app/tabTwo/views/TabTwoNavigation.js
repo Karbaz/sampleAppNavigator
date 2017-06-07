@@ -11,7 +11,7 @@ import Icon from 'react-native-vector-icons/Ionicons'
 
 const mapStateToProps = (state) => {
  return {
-  navigationState: state.tabTwo
+  navigationState: state.MenuTab
   }
 }
 class TabTwoNavigation extends React.Component {
