@@ -14,7 +14,7 @@ export default class Header extends Component{
         <TouchableOpacity onPress={()=>{this.props.navigation.goBack()}}>
         {
           this.props.showBack ? 
-          <Image style={{height:25,width:20}} source={require('../images/back_chevron.png')} />
+          <Image style={{height:20,width:20}} source={require('../images/back_chevron.png')} />
           : null
         }
         </TouchableOpacity>

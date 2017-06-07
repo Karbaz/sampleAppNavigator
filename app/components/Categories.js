@@ -20,7 +20,7 @@ class Categories extends Component{
     let search = <Text onPress={()=>{Alert.alert('new screen')}}>Search</Text>
     return (
       <View>  
-        <Header showBack={false} header={'Sample Header'} rightHeader={search} navigation={this.props.navigation}/>
+        <Header showBack={true} header={'Sample Header'} rightHeader={search} navigation={this.props.navigation}/>
        </View>
       )
   }
