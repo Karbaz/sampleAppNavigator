@@ -1,0 +1,18 @@
+to push a route
+this.props.navigation.navigate('TabFiveScreenTwo')
+
+to push route with data
+this.props.navigation.navigate('TabFiveScreenTwo',{data:data})
+
+to go back
+this.props.navigation.goBack() 
+
+jumto
+this.props.navigation.dispatch({ type:'JUMP_TO_TAB', payload:{index:0} })
+
+register the page in tab
+
+const routeConfiguration = {
+  TabOneScreenOne: { screen: TabOneScreenOne },
+  TabOneScreenTwo: { screen: TabOneScreenTwo },
+}

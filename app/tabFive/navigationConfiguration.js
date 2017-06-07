@@ -2,17 +2,16 @@
 import { StackNavigator } from 'react-navigation'
 
 // Screens
-  import TabFiveScreenOne from '../components/TabFiveScreenOne'
-  import TabFiveScreenTwo from '../components/TabFiveScreenTwo'
+import Profile from '../components/Profile'
+  
 
 const routeConfiguration = {
-  TabFiveScreenOne: { screen: TabFiveScreenOne },
-  TabFiveScreenTwo: { screen: TabFiveScreenTwo },
+  Profile: { screen: Profile },
 }
 // going to disable the header for now
 const stackNavigatorConfiguration = {
   headerMode: 'none',
-  initialRoute: 'TabThreeScreenOne'
+  initialRoute: 'Profile'
 }
 
 export const NavigatorTabFive = StackNavigator(routeConfiguration,stackNavigatorConfiguration)

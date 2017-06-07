@@ -2,19 +2,14 @@
 import { StackNavigator } from 'react-navigation'
 
 // Screens
-import TabThreeScreenOne from '../components/TabThreeScreenOne'
-import TabThreeScreenTwo from '../components/TabThreeScreenTwo'
-import TabThreeScreenThree from '../components/TabThreeScreenThree'
+import Bag from '../components/Bag'
 
 const routeConfiguration = {
-  TabThreeScreenOne: { screen: TabThreeScreenOne },
-  TabThreeScreenTwo: { screen: TabThreeScreenTwo },
-  TabThreeScreenThree: { screen: TabThreeScreenThree },
-
+  Bag: { screen: Bag }
 }
 // going to disable the header for now
 const stackNavigatorConfiguration = {
-  initialRoute: 'TabThreeScreenOne',
+  initialRoute: 'Bag',
   headerMode: 'none',
 }
 
