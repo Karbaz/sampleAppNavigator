@@ -1,7 +1,7 @@
 'use strict'
 import React from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
-export default class TabFiveScreenTwo extends React.Component {
+export default class TabFourScreenTwo extends React.Component {
   render(){
     return(
       <View style={{
@@ -30,7 +30,7 @@ export default class TabFiveScreenTwo extends React.Component {
             backgroundColor:'deeppink',
             marginTop:20
           }}>
-          <Text>{'Go back a screen this tab'}</Text>
+          <Text>{'Go'}</Text>
         </TouchableOpacity>
 
       </View>

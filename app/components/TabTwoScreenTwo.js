@@ -1,25 +1,25 @@
 'use strict'
 import React from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
-export default class TabTwoScreenOne extends React.Component {
+export default class TabTwoScreenTwo extends React.Component {
   render(){
     return(
       <View style={{
         flex:1,
-        backgroundColor:'yellow',
+        backgroundColor:'green',
         alignItems:'center',
         justifyContent:'center'
       }}>
-        <Text>{ 'Tab Two Screen One' }</Text>
+        <Text>{ 'Tab Two Screen Two' }</Text>
         <TouchableOpacity
-          onPress={ () => this.props.navigation.navigate('TabTwoScreenTwo') }
+          onPress={ () => this.props.navigation.goBack() }
           style={{
             padding:20,
             borderRadius:20,
-            backgroundColor:'blue',
+            backgroundColor:'purple',
             marginTop:20
           }}>
-          <Text>{'Go to next screen this tab'}</Text>
+          <Text>{'tab 2 from containers'}</Text>
         </TouchableOpacity>
 
       </View>

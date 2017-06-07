@@ -13,7 +13,7 @@ export default class TabFourScreenOne extends React.Component {
         <Text>{ 'Tab Three Screen One' }</Text>
 
         <TouchableOpacity
-          onPress={ () => {}}
+          onPress={ () => { this.props.navigation.navigate('TabFourScreenTwo') }}
           style={{
             padding:20,
             borderRadius:20,
