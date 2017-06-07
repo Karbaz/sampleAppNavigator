@@ -4,38 +4,44 @@ import {
   Text,
   Platform,
   TouchableOpacity,
-  Image
+  Image,
+  Alert,
+  ScrollView
 } from 'react-native'
 import { connect } from 'react-redux'
 import style from '../Style'
+import Header from '../components/Header'
+
 
 
 class Categories extends Component{
   
   renderHeader=()=>{
+    let search = <Text onPress={()=>{Alert.alert('new screen')}}>Search</Text>
     return (
-      <View style={[style.headerStyle]}>
-        
-        <TouchableOpacity onPress={()=>{this.props.navigation.goBack()}}>
-        <Image style={{height:25,width:20}} source={require('../images/back_chevron.png')} />
-        </TouchableOpacity>
-
-        <Text>Header</Text>
-        <Text>Add</Text>
-      </View>
+      <View>  
+        <Header showBack={false} header={'Sample Header'} rightHeader={search} navigation={this.props.navigation}/>
+       </View>
       )
   }
 
   render(){
-    return <View style={{flex:1,backgroundColor:'red'}}>
-    
-    {Platform.OS === 'ios' ? this.renderHeader() : null}
-    
-    <Text>Cat</Text>
-    <Text onPress={()=>{
-      this.props.navigation.goBack() 
-    }}>Back</Text>
-    </View>
+    return(
+      <View style={{flex: 1,flexDirection: 'column'}}>
+       <View style={{flex:0.9,backgroundColor: 'powderblue'}}>
+          {Platform.OS === 'ios' ? this.renderHeader() : null}
+        </View>
+
+        <View style={{flex:8,backgroundColor: 'skyblue'}}>
+          <ScrollView showsHorizontalScrollIndicator={false} showsVerticalScrollIndicator={false}>
+          <Text>Cat</Text>
+            <Text onPress={()=>{
+              this.props.navigation.goBack() 
+            }}>Back</Text>
+          </ScrollView>
+          </View>
+      </View>
+    )
   }
 }
 

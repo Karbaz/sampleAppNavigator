@@ -15,3 +15,9 @@ const routeConfiguration = {
   TabOneScreenOne: { screen: TabOneScreenOne },
   TabOneScreenTwo: { screen: TabOneScreenTwo },
 }
+
+
+
+//remaning
+1: add fonts
+2: 

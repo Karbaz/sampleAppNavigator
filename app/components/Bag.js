@@ -1,37 +1,36 @@
 'use strict'
 import React from 'react'
-import { View, Text, TouchableOpacity, Platform, Alert } from 'react-native'
+import { View, Text, TouchableOpacity, Platform, Alert, ScrollView } from 'react-native'
 import { connect } from 'react-redux'
 import style from '../Style'
+import Header from '../components/Header'
+
 
 class Bag extends React.Component {
 
   renderHeader=()=>{
-    
+   let search = <Text onPress={()=>{Alert.alert('new screen')}}>Search</Text>
     return (
-      <View style={[style.headerStyle]}>  
-        <TouchableOpacity onPress={()=>{this.props.navigation.goBack()}}>
-        <Text style={{display:'none'}}>
-        {this.props.BagTab.routes ? "Back" : null}
-        </Text>
-        </TouchableOpacity>
-
-        <Text>Header Here</Text>
-        <Text>Search</Text>
-      </View>
+      <View>  
+        <Header showBack={false} header={'Bag'} rightHeader={search} navigation={this.props.navigation}/>
+       </View>
       )
   }
 
   render(){
     return(
-      <View style={{
-        flex:1,
-        backgroundColor:'aqua',
+     <View style={{
+        flex: 1,
+        flexDirection: 'column',
       }}>
-        
-        {Platform.OS === 'ios' ? this.renderHeader() : null}
-        
-        <Text>{ 'Bag' }</Text>
+        <View style={{flex:0.9,backgroundColor: 'powderblue'}}>
+          {Platform.OS === 'ios' ? this.renderHeader() : null}
+        </View>
+        <View style={{flex:8,backgroundColor: 'skyblue'}}>
+          <ScrollView showsHorizontalScrollIndicator={false} showsVerticalScrollIndicator={false}>
+          <Text>{ 'Bag' }</Text>
+          </ScrollView>
+        </View>
       </View>
     )
   }
