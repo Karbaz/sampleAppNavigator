@@ -23,7 +23,7 @@ export default class Header extends Component{
         </TouchableOpacity>
         </View>
         <View style={{width:width/1.5}}>
-        <Text style={{textAlign:'center',width:width/1.5}} numberOfLines={1}>{this.props.header}</Text>
+        <Text style={{textAlign:'center',width:width/1.5,fontFamily:'Montserrat-SemiBold'}} numberOfLines={1}>{this.props.header}</Text>
         </View>
         <View style={{width:width/8}}>{this.props.rightHeader }</View>
         </View>
