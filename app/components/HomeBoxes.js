@@ -5,15 +5,23 @@ import { connect } from 'react-redux'
 import { getCall } from '../actions/HomeBoxesActions'
 import style from '../Style'
 import Header from '../components/Header'
+import Loader from '../components/Loader'
 class HomeBoxes extends React.Component {
   
   constructor(props) {
     super(props);
     this.state = {
-      counter:0
+      counter:1
     }
   }
 
+  componentDidMount=()=>{
+    console.log('componentDidMount')
+  }
+
+  componentWillMount=()=>{
+    console.log('componentWillMount')
+  }
 
  renderHeader=()=>{
     let search = <Text>Search</Text>
@@ -33,10 +41,8 @@ class HomeBoxes extends React.Component {
         <View style={{flex:0.9,backgroundColor: 'powderblue'}}>
           {Platform.OS === 'ios' ? this.renderHeader() : null}
         </View>
-        <View style={{flex:8,backgroundColor: 'skyblue'}}>
+        <View style={{flex:8,backgroundColor: 'skyblue',padding:10}}>
           <ScrollView showsHorizontalScrollIndicator={false} showsVerticalScrollIndicator={false}>
-            
-
           <Text>HomeBoxes</Text>
           <TouchableOpacity
             onPress={ () => {
