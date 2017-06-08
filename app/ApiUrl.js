@@ -1,5 +1,5 @@
 import {NetInfo} from 'react-native';
-import {getAccessToken,getTokenId} from './GlobalStorage';
+import {getAccessToken,getTokenId} from './AsyncStorage';
 
 export const LIVE_URL = 'https://www.bewakoof.com/v1/';
 const STAGING_URL = 'https://staging.bewakoof.com/v1/';
