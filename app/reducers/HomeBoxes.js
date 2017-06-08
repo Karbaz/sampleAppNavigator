@@ -1,14 +1,16 @@
+import {FETCH_STATIC_DATA} from '../actions/HomeBoxesActions'
 let initialState = {
-  HomeBoxe:'HomeBoxesReducer',
-  counter:1
+  showLoader:true,
+  staticData:{}
+  
 }
 export const HomeBoxesReducer = (state = initialState,action) => {
   switch(action.type){
-    case "testing":
+    case FETCH_STATIC_DATA:
     let newState = {
       ...initialState,
-      HomeBoxe:'New',
-      counter:action.payload
+      showLoader:false,
+      staticData:action.payload
     }
     return newState;
     break;
@@ -16,5 +18,4 @@ export const HomeBoxesReducer = (state = initialState,action) => {
     default:
         return state;
   }
-  return state;
 }
