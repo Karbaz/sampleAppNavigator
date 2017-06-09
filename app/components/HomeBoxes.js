@@ -14,7 +14,7 @@ var currentActiveBanner = ''
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 
 class HomeBoxes extends React.Component {
-  
+
   constructor(props) {
     super(props);
     this.state = {
@@ -46,9 +46,9 @@ class HomeBoxes extends React.Component {
 
 
  renderHeader=()=>{
-    let search = <Text>Search</Text>
+    let search = <Text style={{fontSize:12}}>Search</Text>
     return (
-      <View>  
+      <View>
         <Header showBack={false} header={'Home'} rightHeader={search} navigation={this.props.navigation}/>
        </View>
       )
@@ -61,7 +61,7 @@ class HomeBoxes extends React.Component {
 
   renderImageSlider=(data)=>{
     let {home_bannerpath} = this.props.HomeBoxes.staticData.path
-    return (<View style={styles.slide} {...this._panResponder.panHandlers}>
+    return (<View style={[styles.slide]} {...this._panResponder.panHandlers}>
             <ResizableImageView imgUrl={`${home_bannerpath}${data.image}`} widthDivider={1} />
             </View>)
   }
@@ -77,12 +77,12 @@ class HomeBoxes extends React.Component {
         flex: 1,
         flexDirection: 'column',
       }}>
-        <View style={{flex:0.9,backgroundColor: 'white'}}>
-          {Platform.OS === 'ios' ? this.renderHeader() : null}
+        <View style={{backgroundColor: 'transparent'}}>
+          {Platform.OS == 'ios' ? this.renderHeader() : null}
         </View>
         <View style={{flex:8,backgroundColor: 'white'}}>
           <ScrollView showsHorizontalScrollIndicator={false} showsVerticalScrollIndicator={false}>
-          
+
           <Swiper style={styles.wrapper} autoplayTimeout={3}  height={width*1.25} loop={true} autoplay={true} autoplayDirection={true} renderPagination={(activeBanner,previousBanner)=>{
             currentActiveBanner=activeBanner
             return <View style={{backgroundColor:'transparent',position:'absolute',left:0,top:(width*1.25)-50,right:0}}>
@@ -92,7 +92,7 @@ class HomeBoxes extends React.Component {
             })}
             </View></View>
           }}>
-          
+
           {
             this.props.HomeBoxes.staticData.mobile_slider.map((value,index)=>{
               return <View key={index}>{this.renderImageSlider(value)}</View>
@@ -127,7 +127,7 @@ const styles = {
   },
 
   slide: {
-    flex: 1,
+    height:width*1.25,
     justifyContent: 'center',
     backgroundColor: 'transparent'
   },

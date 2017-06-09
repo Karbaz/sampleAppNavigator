@@ -7,7 +7,7 @@ import { NavigatorTabFour } from '../navigationConfiguration'
 //Redux
 import { connect } from 'react-redux'
 // Icon
-import Icon from 'react-native-vector-icons/Ionicons'
+import Icon from 'react-native-vector-icons/MaterialIcons'
 
 const mapStateToProps = (state) => {
  return {
@@ -16,8 +16,7 @@ const mapStateToProps = (state) => {
 }
 class TabFourNavigation extends React.Component {
   static navigationOptions = {
-    tabBarLabel: 'Wishlist',
-    tabBarIcon: ({ tintColor }) => <Icon size={ 25 } name={ 'ios-heart-outline' } color={ "#51cccc" }/>
+  
   }
 
 render(){

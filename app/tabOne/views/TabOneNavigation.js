@@ -11,8 +11,7 @@ import { NavigatorTabOne } from '../navigationConfiguration'
 import { connect } from 'react-redux'
 
 // Icon
-import Icon from 'react-native-vector-icons/Ionicons'
-
+import Icon from 'react-native-vector-icons/MaterialIcons'
 
 const mapStateToProps = (state) => {
  return {
@@ -22,8 +21,7 @@ const mapStateToProps = (state) => {
 
 class TabOneNavigation extends React.Component {
   static navigationOptions = ({navigation})=>({
-    tabBarLabel: 'Home',
-    tabBarIcon: ({ tintColor }) => <Icon size={ 25 } name={ 'ios-home-outline' } color={ "#51cccc" }/>
+    
   })
 
   render(){

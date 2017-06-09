@@ -11,7 +11,7 @@ class Profile extends React.Component {
  renderHeader=()=>{
     let search = <Text onPress={()=>{Alert.alert('new screen')}}>Search</Text>
     return (
-      <View>  
+      <View>
         <Header showBack={false} header={'Profile'} rightHeader={search} navigation={this.props.navigation}/>
        </View>
       )
@@ -20,15 +20,15 @@ class Profile extends React.Component {
   render(){
     return(
     <View style={{flex: 1,flexDirection: 'column'}}>
-       <View style={{flex:0.9,backgroundColor: 'powderblue'}}>
-          {Platform.OS === 'ios' ? this.renderHeader() : null}
-        </View>
-        <View style={{flex:8,backgroundColor: 'skyblue'}}>
+    <View style={{backgroundColor: 'transparent'}}>
+      {Platform.OS == 'ios' ? this.renderHeader() : null}
+     </View>
+        <View style={{flex:8,backgroundColor: 'white'}}>
           <ScrollView showsHorizontalScrollIndicator={false} showsVerticalScrollIndicator={false}>
           <Text>{ 'Profile' }</Text>
           </ScrollView>
           </View>
-      </View> 
+      </View>
     )
   }
 }
@@ -38,7 +38,7 @@ class Profile extends React.Component {
 const mapStateToProps = (state) => {
  return {
     HomeBoxes: state.HomeBoxes,
-    ProfileTab:state.ProfileTab    
+    ProfileTab:state.ProfileTab
   }
 }
 
