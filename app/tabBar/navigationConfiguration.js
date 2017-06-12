@@ -22,7 +22,7 @@ const routeConfiguration = {
 const tabBarConfiguration = {
   //...other configs
   tabBarComponent: NavigationComponent,
-tabBarOptions:{
+  tabBarOptions:{
     // tint color is passed to text and icons (if enabled) on the tab bar
     activeTintColor: '#51cccc',
     inactiveTintColor: '#51cccc',
