@@ -18,6 +18,14 @@ const routeConfiguration = {
 
 
 
-//remaning
-1: add fonts
-2: 
+12-6-2017
+// android specify
+1: add android hardware back button
+2: sperate android and ios files for tabbar => tabbarnavigation eg: tabbarnavigation.android.js and tabbarnavigation.ios.js 
+3: sperate android and ios files for tabbar => navigationConfiguration eg: navigationConfiguration.android.js and navigationConfiguration.ios.js
+4: tab swich alert and same tab refresh
+5: fonts size pickers
+6: android navigation detect https://github.com/lequanghuylc/react-native-detect-navbar-android
+7: Desgin according iphone 5 which fits for all devices
+8: upgrade project to 45 stable version now //done
+9: 

@@ -22,7 +22,9 @@ const routeConfiguration = {
 const tabBarConfiguration = {
   //...other configs
   tabBarComponent: NavigationComponent,
+  tabBarPosition:'bottom',
 tabBarOptions:{
+  tabBarPosition:'bottom',
     // tint color is passed to text and icons (if enabled) on the tab bar
     activeTintColor: '#51cccc',
     inactiveTintColor: '#51cccc',
@@ -34,6 +36,7 @@ tabBarOptions:{
     labelStyle: {fontSize:10},
     style: {backgroundColor:'blue'},
     bottomNavigationOptions: {
+  tabBarPosition:'bottom',
       labelColor: 'white',
       rippleColor: 'white',
       tabs: {
