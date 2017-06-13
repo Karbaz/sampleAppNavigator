@@ -44,7 +44,7 @@ const tabBarConfiguration = {
         },
         TabTwoNavigation: {
           barBackgroundColor: '#37474F',
-          label: 'Menu',
+          label: 'Menus',
           icon: <Icon size={15} color="white" name="menu" />
         },
         TabThreeNavigation: {

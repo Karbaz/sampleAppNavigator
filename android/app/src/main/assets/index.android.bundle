@@ -56305,8 +56305,13 @@ var HomeBoxes = function (_React$Component) {
 
       return _react2.default.createElement(
         _reactNative.TouchableOpacity,
-        { style: { marginTop: 1 } },
-        _react2.default.createElement(_ResizableImageView2.default, { widthDivider: 1, imgUrl: '' + home_path + item.image })
+        {
+          onPress: function onPress() {
+            _this.props.navigation.navigate('Categories');
+          },
+          style: { marginTop: 1 } },
+        _react2.default.createElement(_ResizableImageView2.default, { widthDivider: 1,
+          imgUrl: '' + home_path + item.image })
       );
     };
 
@@ -61629,6 +61634,13 @@ var Categories = function (_Component) {
         null,
         _react2.default.createElement(_Header2.default, { showBack: true, header: 'Sample Header', rightHeader: search, navigation: _this.props.navigation })
       );
+    }, _this.componentDidMount = function () {
+      _reactNative.BackHandler.addEventListener('hardwareBackPress', _this.backHandler);
+    }, _this.onComponentWillUnmount = function () {
+      _reactNative.BackHandler.removeEventListener('hardwareBackPress', _this.backHandler);
+    }, _this.backHandler = function () {
+      _this.props.navigation.goBack();
+      return true;
     }, _temp), babelHelpers.possibleConstructorReturn(_this, _ret);
   }
 
@@ -62151,7 +62163,7 @@ var mapStateToProps = function mapStateToProps(state) {
 
 exports.default = (0, _reactRedux.connect)(mapStateToProps)(Profile);
 }, 699, null, "SampleNavigation/app/components/Profile.js");
-__d(/* SampleNavigation/app/tabBar/navigationConfiguration.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+__d(/* SampleNavigation/app/tabBar/navigationConfiguration.android.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.tabBarReducer = exports.TabBar = undefined;
@@ -62223,7 +62235,7 @@ var tabBarConfiguration = {
         },
         TabTwoNavigation: {
           barBackgroundColor: '#37474F',
-          label: 'Menu',
+          label: 'Menus',
           icon: _react2.default.createElement(_MaterialIcons2.default, { size: 15, color: 'white', name: 'menu' })
         },
         TabThreeNavigation: {
@@ -62255,7 +62267,7 @@ var tabBarReducer = exports.tabBarReducer = function tabBarReducer(state, action
     return TabBar.router.getStateForAction(action, state);
   }
 };
-}, 700, null, "SampleNavigation/app/tabBar/navigationConfiguration.js");
+}, 700, null, "SampleNavigation/app/tabBar/navigationConfiguration.android.js");
 __d(/* SampleNavigation/app/tabOne/views/TabOneNavigation.js */function(global, require, module, exports) {'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -62265,6 +62277,8 @@ Object.defineProperty(exports, "__esModule", {
 var _react = require(12     ); // 12 = react
 
 var _react2 = babelHelpers.interopRequireDefault(_react);
+
+var _reactNative = require(45            ); // 45 = react-native
 
 var _reactNavigation = require(466               ); // 466 = react-navigation
 

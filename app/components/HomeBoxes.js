@@ -56,7 +56,10 @@ class HomeBoxes extends React.Component {
 
   renderImagesBlocks=(item)=>{
     let {home_path} = this.props.HomeBoxes.staticData.path
-    return <TouchableOpacity style={{marginTop:1}}><ResizableImageView  widthDivider={1}   imgUrl={`${home_path}${item.image}`}></ResizableImageView></TouchableOpacity>
+    return (<TouchableOpacity
+    onPress={()=>{this.props.navigation.navigate('Categories')}}
+    style={{marginTop:1}}><ResizableImageView  widthDivider={1}
+    imgUrl={`${home_path}${item.image}`}></ResizableImageView></TouchableOpacity>)
   }
 
   renderImageSlider=(data)=>{
