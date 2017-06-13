@@ -6,7 +6,8 @@ import {
   TouchableOpacity,
   Image,
   Alert,
-  ScrollView
+  ScrollView,
+  BackHandler
 } from 'react-native'
 import { connect } from 'react-redux'
 import style from '../Style'
@@ -24,7 +25,16 @@ class Categories extends Component{
        </View>
       )
   }
-
+  componentDidMount=()=>{
+    BackHandler.addEventListener('hardwareBackPress', this.backHandler);
+  }
+  onComponentWillUnmount=()=>{
+    BackHandler.removeEventListener('hardwareBackPress', this.backHandler);
+  }
+  backHandler = () => {
+            this.props.navigation.goBack();
+            return true;
+  }
   render(){
     return(
       <View style={{flex: 1,flexDirection: 'column'}}>
