@@ -19,6 +19,17 @@ const routeConfiguration = {
   TabFiveNavigation : { screen : TabFiveNavigation},
 }
 
+
+var tabToReload = {
+  TabTwoNavigation:'TabTwoNavigation',
+  TabFiveNavigation:'TabFiveNavigation'
+}
+
+const reloadTab=(state,action, tabName)=>{
+  console.log('reload tabs',tabName)
+}
+
+
 const tabBarConfiguration = {
   //...other configs
   tabBarComponent: NavigationComponent,
@@ -70,6 +81,16 @@ const tabBarConfiguration = {
 export const TabBar = TabNavigator(routeConfiguration,tabBarConfiguration)
 
 export const tabBarReducer = (state,action) => {
+
+  try{
+    if (action.routeName) {
+      if (action.routeName == tabToReload[action.routeName]) {
+        reloadTab(state,action,tabToReload[action.routeName]);
+      }
+    }
+  }catch(e){}
+
+  
   if (action.type === 'JUMP_TO_TAB') {
     return { ...state, index:0 }
   } else {
